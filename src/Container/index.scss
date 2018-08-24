@@ -1,0 +1,30 @@
+.Container {
+	display: flex;
+	flex-direction: row;
+}
+
+.Main {
+	flex: 7;
+}
+
+.Lesser {
+	flex: 3;
+	margin-left: 1.5em;
+}
+
+@media (max-width: 900px) {
+	.Container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.Main {
+		flex: 0;
+	}
+
+	.Lesser {
+		flex: 0;
+		margin-left: 0;
+		margin-top: 1.5em;
+	}
+}

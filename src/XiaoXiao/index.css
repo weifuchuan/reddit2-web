@@ -1,0 +1,46 @@
+.tree_node_list.noselect {
+  margin-top: 40px;
+  box-sizing: border-box;
+  width: 300px;
+  /*  border: 1px solid red;*/
+}
+
+.tree_node {
+  min-height: 28px;
+}
+
+.category {
+  cursor: pointer;
+}
+
+.tree_node_list {
+  padding-left: 50px;
+  border-left: 1px solid #666;
+  overflow: hidden;
+
+  transition: all .3s linear, opacity .3s linear
+}
+
+.tree_node_list.hide {
+  max-height: 0;
+  opacity: 0;
+}
+
+.noselect {
+
+  -webkit-touch-callout: none; /* iOS Safari */
+
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+
+  -khtml-user-select: none; /* Konqueror */
+
+  -moz-user-select: none; /* Firefox */
+
+  -ms-user-select: none; /* Internet Explorer/Edge */
+
+  user-select: none;
+  /* Non-prefixed version, currently
+
+ not supported by any browser */
+
+}

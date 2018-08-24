@@ -1,0 +1,152 @@
+.Card {
+	position: relative;
+	background-color: rgba(255, 255, 255, 0.8);
+	width: 100%;
+	color: rgb(135, 138, 140);
+	cursor: pointer;
+	fill: rgb(135, 138, 140);
+	overflow: hidden;
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(204, 204, 204);
+	border-image: initial;
+	transition: color 0.5s ease 0s, fill 0.5s ease 0s, box-shadow 0.5s ease 0s;
+	padding-left: 40px;
+	border-radius: 4px;
+
+	:hover {
+		.DeletePost {
+			color: rgb(75, 8, 82);
+		}
+	}
+}
+
+.DeletePost {
+	position: absolute;
+	color: #fff;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+}
+
+.LikeAndNay {
+	width: 40px;
+	border-left: 4px solid transparent;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	box-sizing: border-box;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	height: 100%;
+	left: 0;
+	padding: 8px 4px 8px 0;
+	position: absolute;
+	top: 0;
+}
+
+.CardContent {
+	background: rgb(255, 255, 255);
+	padding-top: 8px;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+
+	> div:nth-child(2) {
+		position: relative;
+	}
+}
+
+.CardContentOver {
+	position: absolute;
+	top: 0;
+	margin-top: 2em;
+	left: 0;
+	width: 100%;
+	height: calc(100% - 2em);
+	opacity: 0;
+	z-index: 10;
+}
+
+.Point {
+	color: rgb(124, 124, 124);
+	font-size: 6px;
+	line-height: 20px;
+	vertical-align: middle;
+	margin: 0px 4px;
+}
+
+.PostedBy {
+	color: rgb(120, 124, 126);
+	flex: 0 0 auto;
+	margin-right: 3px;
+}
+.PostedByA {
+	color: rgb(120, 124, 126);
+	font-weight: 400;
+	line-height: 16px;
+	margin-right: 3px;
+	text-decoration: none;
+}
+
+.CardTitle {
+	// margin: 0 8px;
+
+	> span {
+		display: inline;
+		position: relative;
+		text-decoration: none;
+		word-break: break-word;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 1.3em;
+		color: #111111;
+		vertical-align: baseline;
+	}
+}
+
+.CardContentInner {
+	margin-top: 8px;
+	//-webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);
+	mask-image: linear-gradient(180deg, #000 60%, transparent);
+	overflow: hidden;
+	padding: 5px 5px 0 0;
+	font-family: "Noto Sans", sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 21px;
+	color: rgb(26, 26, 27);
+	word-break: break-word;
+}
+
+.CardBottomBar {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+
+	> a {
+		padding: 4px 4px 4px 0;
+		font-size: 12px;
+		font-weight: 700;
+		line-height: 16px;
+		border-radius: 2px;
+		transition: background-color 0.1s ease 0s;
+		word-break: normal;
+		white-space: nowrap;
+		min-width: 25px;
+		color: rgb(120, 124, 126);
+
+		> span {
+			margin-left: 4px;
+		}
+	}
+	> a:hover {
+		background-color: #94b6cc;
+	}
+}

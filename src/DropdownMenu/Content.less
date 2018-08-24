@@ -1,0 +1,90 @@
+.dm-content {
+	background-color: rgb(255, 255, 255);
+	color: rgb(28, 28, 28);
+	border-width: 0px 1px 1px;
+	border-style: solid;
+	border-color: rgb(237, 239, 241);
+	border-image: initial;
+	// .............
+	box-sizing: border-box;
+	border-radius: 0 0 4px 4px;
+	left: -1px;
+	margin-top: -1px;
+	max-height: 482px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	padding-bottom: 16px;
+	position: absolute;
+	right: 0;
+	top: 100%;
+	width: 250px;
+	z-index: 100000; 
+
+	input {
+		background-color: rgb(246, 247, 248);
+		color: rgb(28, 28, 28);
+		border-width: 1px;
+		border-style: solid;
+		border-color: rgb(237, 239, 241);
+		border-image: initial;
+		height: 30px;
+		margin: 16px 16px 0;
+		outline: none;
+		padding: 0 6px;
+		box-sizing: border-box;
+		width: calc(100% - 16px);
+		font-size: 14px;
+		line-height: 21px;
+	}
+
+	.group-name {
+		font-size: 10px;
+		font-weight: 500;
+		line-height: 16px;
+		text-transform: uppercase;
+		padding: 16px 24px 8px;
+		color: rgb(135, 138, 140);
+	}
+
+	.item {
+		padding: 8px 24px;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		color: inherit;
+		text-decoration: inherit;
+
+		.icon {
+			flex-grow: 0;
+			height: 20px;
+			width: 20px;
+			color: #0079d3;
+			fill: #0079d3;
+		}
+
+		.name {
+			flex-grow: 1;
+			font-size: 14px;
+			line-height: 18px;
+			margin-left: 1em;
+			max-width: 208px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline;
+		}
+	}
+	.item:hover {
+		background-color: #f1efeff8;
+	}
+}

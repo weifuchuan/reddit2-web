@@ -1,0 +1,178 @@
+.Nav {
+	left: 0px;
+	position: fixed;
+	right: 0px;
+	top: 0px;
+	z-index: 80;
+	flex: 0 1 0%;
+	background-color: rgb(255, 255, 255);
+	color: rgb(28, 28, 28);
+	border-bottom: 1px solid rgb(237, 239, 241);
+	height: 48px;
+	padding: 0 20px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.Logo {
+	height: 48px;
+	width: 48px;
+}
+
+.LogoName {
+	height: 32px;
+	width: 80px;
+	margin-right: 1em;
+}
+
+.IconBtns {
+	border-right: 1px solid rgb(237, 239, 241);
+	display: flex;
+	margin-right: 8px;
+	padding-right: 8px;
+	align-items: center;
+	flex-direction: row;
+	height: 100%;
+
+	div {
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		height: 100%;
+
+		a {
+			fill: rgb(26, 26, 27);
+			border-radius: 2px;
+			transition: background-color 0.1s ease 0s;
+			height: 32px;
+			// line-height: 14px;
+			padding: 8px;
+			width: 32px;
+			color: inherit;
+			text-decoration: inherit;
+
+			svg {
+				height: 16px;
+				width: 16px;
+			}
+		}
+	}
+}
+
+@media (max-width: 788px) {
+	.IconBtns {
+		display: none;
+	}
+}
+
+.loggedBtnsOfNavbar {
+	display: flex;
+	flex-direction: row;
+	-webkit-box-align: center;
+	align-items: center;
+
+	span {
+		a {
+			-webkit-box-align: center;
+			align-items: center;
+			display: flex;
+			flex-direction: row;
+			position: relative;
+			padding: 8px;
+			border-radius: 2px;
+			transition: background-color 0.1s ease 0s;
+
+			svg {
+				fill: rgb(26, 26, 27);
+				height: 16px;
+				position: relative;
+				width: 16px;
+			}
+		}
+		button {
+			background: transparent;
+			border: none;
+			color: inherit;
+			align-items: center;
+			display: flex;
+			flex-direction: row;
+			cursor: pointer;			
+			padding: 8px;
+			border-radius: 2px;
+
+			svg {
+				fill: rgb(0, 121, 211);
+				height: 16px;
+				width: 16px;
+			}
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.loggedBtnsOfNavbar {
+		display: none;
+	}
+}
+
+.User{
+	-webkit-box-align: center;
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	text-align: left;
+	border-radius: 4px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: transparent;
+	border-image: initial;
+	padding: 2px 0px;
+	background: transparent;
+	color: inherit;
+	cursor: pointer;
+	margin-left: 1em; 
+
+	svg {
+		height: 25px;
+		width: 25px;
+		margin-left: 0.5em; 
+	}
+}
+
+@media (max-width:800px){
+	.UserName{
+		display:none; 
+	}
+	.LogoName{
+		display:none; 
+	}
+}
+
+.UserPopoverContent{
+	width:150px; 
+	display: flex; 
+	flex-direction: column; 
+
+	>button{
+		width:100%;  
+		background-color: #ffffff; 
+		color: #635f5f;
+		border: none;
+		padding: 0.25em 0.5em 0.25em; 
+		text-align: start; 		
+		font-weight: bold;
+
+		display: flex; 
+		align-items: center; 
+
+		>span{
+			margin-left: 1em; 
+		}
+	}
+
+	>button:hover{
+		color: #ffffff; 
+		background-color: #2e4bca;
+	}
+}
