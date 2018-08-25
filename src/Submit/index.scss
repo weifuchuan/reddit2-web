@@ -16,3 +16,47 @@ div.mde-header > div {
 	height: 300px;
 }
 
+.Slider {
+	margin-top: 2em;
+	padding:2em; 
+	> div {
+		background-color: rgb(255, 255, 255);
+		margin-top: 15px;
+		border-radius: 4px;
+		padding: 12px;
+
+		> div:nth-child(1) {
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 20px;
+			color: rgb(28, 28, 28);
+			display: flex;
+			-webkit-box-align: center;
+			align-items: center;
+			border-bottom: 1px solid rgb(237, 239, 241);
+
+			> svg {
+				width: 40px;
+				height: 40px;
+				margin-right: 8px;
+				padding-bottom: 5px;
+			}
+		}
+
+		> ol:nth-child(2) {
+			font-size: 14px;
+			font-weight: 500;
+			line-height: 18px;
+			list-style: decimal inside;
+			padding-left: 0;
+			> li {
+				color: rgb(28, 28, 28);
+				border-bottom: 1px solid rgb(237, 239, 241);
+				padding: 10px 5px;
+				span {
+					vertical-align: inherit;
+				}
+			}
+		}
+	}
+}

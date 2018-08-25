@@ -29,7 +29,7 @@ class App extends React.Component {
 							index
 							path={'/>'} 
 							loadComponent={(cb: any) => import('./Home').then((Home) => cb(Home.default))}
-							enterFilter={this.loggedFilterBuilder('/c/popular')}
+							enterFilter={this.loggedFilterBuilder('/popular')}
 						/>
 						<Route
 							path={'/all>'} 

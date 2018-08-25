@@ -6,7 +6,8 @@ import {
 	getAllPostByNew,
 	getUserInfo,
 	getSubscriberCount,
-	getSubscribedCommunityIds
+	getSubscribedCommunityIds,
+	getTrendingCommunities
 } from '../kit/web';
 import { User, Post, Community, Interloper } from '../common/model/index';
 
@@ -30,14 +31,7 @@ export class Store {
 	}
 
 	@observable posts: Post[] = [];
-	// private _myLikePosts: Set<string> = new Set();
-	// get myLikePosts() {
-	// 	return this._myLikePosts;
-	// }
-	// private _myNayPosts: Set<string> = new Set();
-	// get myNayPosts() {
-	// 	return this._myNayPosts;
-	// }
+
 	@observable myLikePosts = new Map<string, boolean>();
 	@observable myNayPosts = new Map<string, boolean>();
 
@@ -105,7 +99,8 @@ export class Store {
 	async getTrendingCommunities(): Promise<Community[]> {
 		if (this.trendingCommunities.length > 0) return this.trendingCommunities;
 		else {
-			return [  ];
+			this.trendingCommunities = observable(await this.getCommunities(await getTrendingCommunities()));
+			return this.trendingCommunities;
 		}
 	}
 

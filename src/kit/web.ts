@@ -19,8 +19,14 @@ import { observable } from '../../node_modules/mobx';
 import { Community } from 'src/model/index';
 import { GetUserInfoReq, CommentPostReq } from '../common/api/index';
 import { DeletePostReq } from '../common/api/post';
-import { GetCommunitySubscriberCountReq, GetCommunitySubscriberCountResp } from '../common/api/community';
+import {
+	GetCommunitySubscriberCountReq,
+	GetCommunitySubscriberCountResp,
+	SubscribeCommunityReq,
+	UnsubscribeCommunityReq
+} from '../common/api/community';
 import { GetSubscribedCommunitiesReq, GetSubscribedCommunitiesResp } from '../common/api/user';
+import { GetTrendingCommunitiesResp } from '../common/api/community';
 import {
 	MediaUploadResp,
 	GetPostByIdsReq,
@@ -29,7 +35,7 @@ import {
 	GetAllPostByNewResp
 } from '../common/api/index';
 
-const host = '/api';
+const host = '/reddit2';
 const tokenKey = 'f9b3129d2';
 const refreshTokenKey = 'd226a7eb';
 const idKey = 'b244566fa';
@@ -324,4 +330,30 @@ export async function getSubscribedCommunityIds(userId: string): Promise<string[
 		return resp.communityIds;
 	}
 	throw resp.msg;
+}
+
+export async function subscribeCommunity(id: string): Promise<void> {
+	const req: SubscribeCommunityReq = { id };
+	const resp = await $.authReq<Resp>(`${host}/community/subscribe`, req);
+	if (resp.code === code.success) {
+		return;
+	} else {
+		throw resp.msg;
+	}
+}
+
+export async function unsubscribeCommunity(id: string): Promise<void> {
+	const req: UnsubscribeCommunityReq = { id };
+	const resp = await $.authReq<Resp>(`${host}/community/unsubscribe`, req);
+	if (resp.code === code.success) {
+		return;
+	} else {
+		throw resp.msg;
+	}
+}
+
+export async function getTrendingCommunities(): Promise<string[]> {
+	const resp = await $.json<GetTrendingCommunitiesResp>(`${host}/community/trending`, {});
+	if (resp.code === code.success) return resp.ids;
+	else throw resp.msg;
 }
