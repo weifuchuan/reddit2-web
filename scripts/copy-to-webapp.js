@@ -45,9 +45,11 @@ function copyDir(src, dist, callback) {
   }
 }
 
-// F:\FuchuanTrainingGround\reddit2\reddit2-server\webapp
-copyDir("./build", "../reddit2-server/webapp", err => {
-  if (err) {
-    throw err;
-  }
-})
+// // F:\FuchuanTrainingGround\reddit2\reddit2-server\webapp
+// copyDir("./build", "../reddit2-server/webapp", err => {
+//   if (err) {
+//     throw err;
+//   }
+// })
+
+fs.copyFileSync("./build/index.html", "../reddit2-server/webapp/index.html"); 
