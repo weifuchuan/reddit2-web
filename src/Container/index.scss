@@ -1,28 +1,26 @@
 .Container {
 	display: flex;
 	flex-direction: row;
+
+	@media (max-width: 900px) {
+		flex-direction: column;
+	}
 }
 
 .Main {
 	flex: 7;
+	max-width: 70%;
+	@media (max-width: 900px) {
+		flex: 0;
+		max-width: 100%;
+	}
 }
 
 .Lesser {
 	flex: 3;
 	margin-left: 1.5em;
-}
 
-@media (max-width: 900px) {
-	.Container {
-		display: flex;
-		flex-direction: column;
-	}
-
-	.Main {
-		flex: 0;
-	}
-
-	.Lesser {
+	@media (max-width: 900px) {
 		flex: 0;
 		margin-left: 0;
 		margin-top: 1.5em;

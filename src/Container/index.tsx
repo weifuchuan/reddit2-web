@@ -9,8 +9,8 @@ export default (props: {
 }) => {
 	return (
 		<div style={props.style} className={`Container ${props.className ? props.className : ''}`}>
-			<div className="Main">{props.main}</div>
-			<div className="Lesser">{props.lesser}</div>
+				<div className="Main">{props.main}</div>
+				<div className="Lesser">{props.lesser}</div>
 		</div>
 	);
 };

@@ -12,6 +12,7 @@ body {
   display: flex;
   flex: 1;
   background-color: rgb(218, 224, 230);
+  width: 100%;
 }
 
 .flex {
@@ -24,6 +25,7 @@ body {
 
 #root {
   flex: 1;
+  width: 100%;
 }
 
 .Title{

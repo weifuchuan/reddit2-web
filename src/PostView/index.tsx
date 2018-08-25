@@ -7,6 +7,7 @@ import FullScreenPost from './FullScreenPost';
 import { observable, runInAction, action } from 'mobx';
 import { List } from 'antd';
 import { Store } from 'src/store';
+import './index.scss'
 
 interface Props {
 	store?: Store;
